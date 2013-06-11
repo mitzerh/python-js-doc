@@ -2,7 +2,7 @@ python-js-doc
 =============
 
 ***Still under development***
-&nbsp;
+
 Javascript documentation which strictly uses comment tagging only
 &nbsp;
 
