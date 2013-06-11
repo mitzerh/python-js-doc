@@ -1,0 +1,40 @@
+/*** Formatting ***/
+html, body { height: 100%; } 
+body, h1, h2, h3, h4, h5, h6, form, fieldset, ul, ol, li, dl, dt, dd, table, caption, th, td, blockquote, p, address, iframe, div, br, hr, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; background: transparent; font-size: 100%; }
+body { color: #333; font-weight: normal; font-size: 12px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing: 0; word-spacing: 0; white-space: normal; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+p { margin: 0 0 16px; color: #333; font-size: 14px; line-height: 1.4; }
+
+/*** Headings ***/
+h1, h2, h3, h4, h5, h6 { line-height: normal; }
+
+/*** Anchors ***/
+a { outline: 0 none; color: #183a52; text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: underline; }
+
+/*** Misc ***/
+abbr { border: 0 none; font-variant: normal; cursor: pointer; }
+fieldset, img, iframe { border: 0 none; }
+address, cite { font-style: normal; }
+
+/*** Quotes ***/
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: " "; content: none; }
+
+/*** Lists ***/
+ul, ol { font-size: 0; list-style: none; }
+li { font-size: 12px; }
+
+/*** Form Controls ***/
+legend { color: #000; }
+label { font-weight: normal; white-space: normal !important; }
+label, input, select, textarea { display: inline-block; vertical-align: middle; }
+textarea, select[multiple="multiple"] { vertical-align: top; }
+label, button, input[type="submit"] { cursor: pointer; }
+input[type="text"], input[type="password"], textarea { padding: 3px; border: 1px solid #c2c2c2; }
+
+/*** Table ***/
+table { border-collapse: collapse; }
+caption { caption-side: top; }
+caption, th { font-weight: normal; text-align: left; }
+th, td { vertical-align: top; }

@@ -1,0 +1,320 @@
+<!DOCTYPE html5>
+<html>
+<head>
+<link rel="stylesheet" href="../css/jsdocs-reset.css" type="text/css" />
+<link rel="stylesheet" href="../css/jsdocs-base.css" type="text/css" />
+</head>
+<body>
+<header>
+	<h1>sample-2.js</h1>
+<p class="desc">No Description. hint: describe using @fileOverview</p>
+	<div class="to-index"><a href="../">[Back to index]</a></div></header>
+<div id="content">
+	<div class="rail"><section class="constructors">
+	
+	<ul class="tree"><li class="constructor"><a href="#anc-cc49ccadf94d270883b07c037f4b696c">MultiFeedParser</a>
+<ul><li class="constructor"><a href="#anc-9a95ef493b3d87ea297b54c977a55014">event</a>
+<ul></ul></li></ul></li><li class="constructor"><a href="#anc-3952e89079890555696e7d62d4ab871e">Events</a>
+<ul><li><a href="#anc-e2489dc4548d0098e9a68c5f172e578e">onLoad()</a></li>
+<li><a href="#anc-be3f5fad55f091ea08892023291bc798">addFeed()</a></li>
+<li><a href="#anc-fc51d8a5d43b46d16eb6f3d875ad2328">removeFeed()</a></li>
+<li><a href="#anc-233528d9539670a107b59cdbe2b5d61d">reload()</a></li>
+<li><a href="#anc-f7282ce49b42dad8928d99428b0de10b">getData()</a></li>
+</ul></li></ul>
+</section>
+<section class="others">
+	<h4>Others</h4>
+	<ul class="tree"><li><a href="#anc-b9cfc5a84b583cfd94a316e7926f1ddb">setRefreshRate()</a></li>
+<li><a href="#anc-979f1b4738bd98495df61df8aa986b2d">loadFeed()</a></li>
+<li><a href="#anc-ca4dd14a5dd0c5db8a1d84b4dfdec412">triggerStack()</a></li>
+<li><a href="#anc-a844d46b68c3c619d72e504773eb0178">setLoaderArgs()</a></li>
+<li><a href="#anc-f1d2c86bcb3d6a2594df141c6c4c664f">getNormalizationFN()</a></li>
+<li><a href="#anc-a0ba4d2be9e6c7adcb38dae95ff01413">useJSONPCallback()</a></li>
+<li><a href="#anc-490ed48bc13b008bf7d8effa935df6c4">inDataType()</a></li>
+<li><a href="#anc-aad3aeff533aece903a8380a8e93fe8c">getJSONP()</a></li>
+</ul>
+</section></div>
+	<div class="main"><section class="constructors c-desc">
+	<article class="desc c-main" data-id="desc-cc49ccadf94d270883b07c037f4b696c">
+	<a name="anc-cc49ccadf94d270883b07c037f4b696c"></a>
+	<h3><span>constructor :: </span>MultiFeedParser <em>(config)</em> <span class="scope">[public]</span></h3>
+	<div class="summary">No Description.</div>
+		<div class="params">
+		<h4>@params</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td>	</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>config</code></pre></td>
+		<td>object</td>
+		<td>Configuration file</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>config.feeds</code></pre></td>
+		<td>object</td>
+		<td>(required) Feed Information</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>config.logging</code></pre></td>
+		<td>boolean</td>
+		<td>(optional) enable/disable console logging (default is false)</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>config.initOnLoad</code></pre></td>
+		<td>boolean</td>
+		<td>(optional) when enabled, it will load the feeds on initialization; when disabled, you will have to call event.reload() to initiate (default is true)</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>config.cacheTime</code></pre></td>
+		<td>integer</td>
+		<td>(optional) define the browser cache buster in minutes (default is nothing)</td>
+		</tr></tbody>
+		</table>	</div>
+	
+</article><article class="desc " data-id="desc-9a95ef493b3d87ea297b54c977a55014">
+	<a name="anc-9a95ef493b3d87ea297b54c977a55014"></a>
+	<h3><span>namespace :: </span>event</h3>
+	<div class="summary">Uses the Events constructor (see the constructor for details)</div>
+	
+	
+</article><article class="desc c-main" data-id="desc-3952e89079890555696e7d62d4ab871e">
+	<a name="anc-3952e89079890555696e7d62d4ab871e"></a>
+	<h3><span>constructor :: </span>Events <span class="scope">[private]</span></h3>
+	<div class="summary">All the accessible public event methods</div>
+	
+	
+</article><article class="fn" data-id="fn-e2489dc4548d0098e9a68c5f172e578e">
+	<a name="anc-e2489dc4548d0098e9a68c5f172e578e"></a>
+	<h3><span>function</span> :: onLoad</h3>
+	<div class="summary">Bind a function to the onload event of a type <br />Different from event.getData() - this will trigger on event.reload();</div>
+	
+	$returns
+	<div class="ex"><h4>Example code:</h4><pre><code>Argument options: <br />1. Simple: <br />event.onLoad("feed1",function(data) { alert(data); }); <br />2. Advanced: <br />event.onload({ type:"feed1", callback:function(data) { alert(data); });</code></pre></div>
+</article><article class="fn" data-id="fn-be3f5fad55f091ea08892023291bc798">
+	<a name="anc-be3f5fad55f091ea08892023291bc798"></a>
+	<h3><span>function</span> :: addFeed <em>(argument[0], argument[1])</em></h3>
+	<div class="summary">Adds a feed after initialization of the script</div>
+		<div class="params">
+		<h4>@params</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td>	</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>argument[0]</code></pre></td>
+		<td>string</td>
+		<td>feed type name</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>argument[1]</code></pre></td>
+		<td>string</td>
+		<td>url of the feed</td>
+		</tr></tbody>
+		</table>	</div>
+	$returns
+	<div class="ex"><h4>Example code:</h4><pre><code>Argument options: <br />1. Simple (using two {string} arguments) <br />event.addFeed("feed1","http://foo.bar.com"); <br />2. Advanced (using an {object} argument) <br />event.addFeed({ type:"feed1", url:"http://foo.bar.com", refresh:60 });</code></pre></div>
+</article><article class="fn" data-id="fn-fc51d8a5d43b46d16eb6f3d875ad2328">
+	<a name="anc-fc51d8a5d43b46d16eb6f3d875ad2328"></a>
+	<h3><span>function</span> :: removeFeed <em>(type)</em></h3>
+	<div class="summary">Remove a feed and all its instances and dependencies</div>
+		<div class="params">
+		<h4>@params</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td>	</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>type</code></pre></td>
+		<td>string</td>
+		<td>Type id of the feed; you can remove multiple feeds by splitting with spaces</td>
+		</tr></tbody>
+		</table>	</div>
+	$returns
+	<div class="ex"><h4>Example code:</h4><pre><code>event.removeFeed("feed1"); <br />event.removeFeed("feed1 feed2 feed3");</code></pre></div>
+</article><article class="fn" data-id="fn-233528d9539670a107b59cdbe2b5d61d">
+	<a name="anc-233528d9539670a107b59cdbe2b5d61d"></a>
+	<h3><span>function</span> :: reload <em>(types)</em></h3>
+	<div class="summary">Reloads the feed types</div>
+		<div class="params">
+		<h4>@params</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td>	</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>types</code></pre></td>
+		<td>string</td>
+		<td>(optional) feed type name/s; if defined, it will only load the specific ones; if undefined it will reload all types</td>
+		</tr></tbody>
+		</table>	</div>
+	$returns
+	<div class="ex"><h4>Example code:</h4><pre><code>event.reload(); <br />event.reload("feed1"); <br />event.reload("feed1 feed2");</code></pre></div>
+</article><article class="fn" data-id="fn-f7282ce49b42dad8928d99428b0de10b">
+	<a name="anc-f7282ce49b42dad8928d99428b0de10b"></a>
+	<h3><span>function</span> :: getData</h3>
+	<div class="summary">Bind a function to get the latest type's data. <br />Different from event.onLoad() - this will only trigger only when explicitly called</div>
+	
+	$returns
+	<div class="ex"><h4>Example code:</h4><pre><code>Argument options: <br />1. Simple: <br />event.getData("feed1",function(data) { alert(data); }); <br />2. Advanced: <br />event.getData({ type:"feed1", callback:function(data) { alert(data); });</code></pre></div>
+</article>
+</section>
+<section class="others c-desc">
+	<article class="fn" data-id="fn-b9cfc5a84b583cfd94a316e7926f1ddb">
+	<a name="anc-b9cfc5a84b583cfd94a316e7926f1ddb"></a>
+	<h3><span>function</span> :: setRefreshRate <em>(self, type, info)</em> <span class="scope">[private]</span></h3>
+	<div class="summary">Refresh rate helper function <br />Sets the refresh rate in seconds</div>
+		<div class="params parameters">
+		<h4>parameters</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td>	</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>self</code></pre></td>
+		<td>object</td>
+		<td>Prototype of the feed instance</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>type</code></pre></td>
+		<td>string</td>
+		<td>Feed type name</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>info</code></pre></td>
+		<td>object</td>
+		<td>Config information of the type</td>
+		</tr></tbody>
+		</table>	</div>
+		<div class="params returns">
+		<h4>returns</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td></tr></tbody>
+		</table>	</div>
+	
+</article><article class="fn" data-id="fn-979f1b4738bd98495df61df8aa986b2d">
+	<a name="anc-979f1b4738bd98495df61df8aa986b2d"></a>
+	<h3><span>function</span> :: loadFeed <em>(vars, type)</em> <span class="scope">[private]</span></h3>
+	<div class="summary">Feed loader helper <br />Loads the feed via jQuery.ajax()</div>
+		<div class="params parameters">
+		<h4>parameters</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td>	</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>vars</code></pre></td>
+		<td>object</td>
+		<td>Variables of the feed instance</td>
+			</tr><tr>
+		<td><pre><code>@param</code></pre></td>
+		<td><pre><code>type</code></pre></td>
+		<td>string</td>
+		<td>Feed type name</td>
+		</tr></tbody>
+		</table>	</div>
+		<div class="params returns">
+		<h4>returns</h4>
+		<table border="2">
+		<thead>
+			<tr>
+				<td>code</td>
+				<td>name</td>
+				<td>type</td>
+				<td class="desc">description</td>
+			</tr>
+		</thead>
+		<tbody><tr class="first"><td colspan="4">&nbsp;</td></tr></tbody>
+		</table>	</div>
+	
+</article><article class="fn" data-id="fn-ca4dd14a5dd0c5db8a1d84b4dfdec412">
+	<a name="anc-ca4dd14a5dd0c5db8a1d84b4dfdec412"></a>
+	<h3><span>function</span> :: triggerStack <span class="scope">[private]</span></h3>
+	<div class="summary">Function Stack trigger helper <br />Runs the stack of functions</div>
+	
+	
+	
+</article><article class="fn" data-id="fn-a844d46b68c3c619d72e504773eb0178">
+	<a name="anc-a844d46b68c3c619d72e504773eb0178"></a>
+	<h3><span>function</span> :: setLoaderArgs <span class="scope">[private]</span></h3>
+	<div class="summary">Loader Arguments helper <br />common arguments parser for event.getData and event.onLoad</div>
+	
+	
+	
+</article><article class="fn" data-id="fn-f1d2c86bcb3d6a2594df141c6c4c664f">
+	<a name="anc-f1d2c86bcb3d6a2594df141c6c4c664f"></a>
+	<h3><span>function</span> :: getNormalizationFN <span class="scope">[private]</span></h3>
+	<div class="summary">Normalization function helper <br />Checks to see if there is a normalization function to a feed type</div>
+	
+	
+	
+</article><article class="fn" data-id="fn-a0ba4d2be9e6c7adcb38dae95ff01413">
+	<a name="anc-a0ba4d2be9e6c7adcb38dae95ff01413"></a>
+	<h3><span>function</span> :: useJSONPCallback <span class="scope">[private]</span></h3>
+	<div class="summary">JSONP callback helper <br />Checks whether to use option1 or option2 callback parameters</div>
+	
+	
+	
+</article><article class="fn" data-id="fn-490ed48bc13b008bf7d8effa935df6c4">
+	<a name="anc-490ed48bc13b008bf7d8effa935df6c4"></a>
+	<h3><span>function</span> :: inDataType <span class="scope">[private]</span></h3>
+	<div class="summary">Ajax types helper <br />Checks whether the ajax data type is supported</div>
+	
+	
+	
+</article><article class="fn" data-id="fn-aad3aeff533aece903a8380a8e93fe8c">
+	<a name="anc-aad3aeff533aece903a8380a8e93fe8c"></a>
+	<h3><span>function</span> :: getJSONP <span class="scope">[private]</span></h3>
+	<div class="summary">JSONP callback helper <br />Gets the jsonp callback parameter from the url</div>
+	
+	
+	
+</article>
+</section></div>
+</div>
+</body>
+</html>

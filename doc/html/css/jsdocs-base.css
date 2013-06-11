@@ -1,0 +1,70 @@
+/*** general ***/
+body { padding: 0 10px; overflow-x: hidden; min-width: 768px; }
+p { font-size: 12px; margin-bottom: 8px; }
+h3 { font-size: 18px; }
+h4 { font-size: 14px; }
+
+/*** code blocks ***/
+pre { background: #85A1C9; color:#fff; padding: 20px; margin: 0; border:1px solid #ddd;}
+code { font: 12px Monaco;  }
+
+/** headline **/
+header { padding: 15px 0 25px; }
+header h1 { font-size: 32px; }
+header .desc { font-size: 18px; }
+
+/*** footer ***/
+footer .to-top { display: none; position: fixed; bottom: 5px; right: 5px; padding: 5px; background-color: #ccc; }
+footer .to-top.show { display: block; }
+
+/*** content ***/
+#content { border-top: 2px solid #ccc; padding: 5px 0 0; }
+
+/*** rail ***/
+.rail { float: left; width: 200px; overflow:auto; background-color: #ccc; padding: 8px 5px; }
+.rail.float { position: fixed; top: 5px; left: 10px; }
+.rail li > a { font-style: italic; }
+.rail li.highlight > a { text-decoration: underline; }
+.rail .constructor > a { font-style: normal; font-weight: bold; font-size: 14px; }
+.rail section > h4 { margin: 4px 0 15px; padding: 4px; background-color: #999; }
+
+.rail ul.tree ul { background: url('../img/vline.png') repeat-y; }
+.rail ul.tree ul { margin-left: 10px; }
+.rail ul.tree > li li { padding: 0 12px; margin: 0 0 10px; line-height: 20px; background: url('../img/node.png') no-repeat; color: #369; }
+.rail ul.tree ul { margin-top: 8px; }
+.rail ul.tree > li li:last-child { background: #ccc url('../img/lastnode.png') no-repeat; }
+
+.rail .tree > li.constructor > a { font-size: 16px; }
+.rail .others li { margin-bottom: 10px; }
+
+/*** main ***/
+#content .main { margin-left: 215px; }
+#content .main section { padding-bottom: 20px; }
+#content .main section > article { padding-bottom: 20px; margin-bottom: 5px; border-bottom: 2px solid #ccc; }
+#content .main section > article.c-main { font-size: 16px; }
+
+/*** articles ***/
+article > div { padding-bottom: 15px;}
+article > h3 { display:inline-block; padding: 4px 2px 2px 0px; }
+article > h3 span { text-transform: capitalize; color: #800; }
+article > h3 span.name-const { color: #969696; }
+article > h3 em { font-size: 14px; color: #999; }
+article > h3 span.scope { text-transform: uppercase; font-size: 10px; font-style: normal; color: #ff0000; }
+article.highlight > h3 { background-color: #ECF0A5; }
+article > .summary { margin-bottom: 10px; font-size: 14px; }
+article .ex h4 { padding-bottom: 3px; }
+
+article table { font-size: 14px; }
+article table thead { font-weight: bold; }
+article table td { padding: 5px; }
+article table .first { display: none; }
+
+article .params table tr > td:first-child { display: none; }
+article .params h4 { text-transform: capitalize; padding-bottom: 5px; }
+article .params table tbody tr > td:nth-child(3) { font-style: italic; color: #006CE8; }
+article .params.returns table tr > td:nth-child(2) { display: none; }
+
+article .params pre { padding: 2px; margin: 0; background: #eee; color: #0E304A;}
+article .params code { font-size: 11px; }
+
+
