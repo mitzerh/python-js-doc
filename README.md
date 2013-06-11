@@ -18,12 +18,12 @@ See: [JS Doc Tag Reference](https://code.google.com/p/jsdoc-toolkit/wiki/TagRefe
 Those supported are listed out below.
 
 ##### Note:
-As with the in-house nature of the scope of this parser, this does not function like the other proprietary JS Doc parser. 
-This parser will not go through your code and translate it for you. 
-It will all depend on the accuracy of your documentation comment blocks.
+This parser does not function like the other proprietary JS Doc parser. 
+It will not go through your code and translate it for you. 
+It all depends on the accuracy of your documentation comment blocks.
 
 Although it follows most of the key JS Doc tags to the tee, 
-there are some variations in order to adapt to our in-house coding styles.
+there are some minimal variations.
 
 The file output for the parsed documentation is currenlty
 only available in **JSON**, and **HTML** format.
